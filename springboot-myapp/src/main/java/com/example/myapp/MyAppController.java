@@ -15,7 +15,16 @@ public class MyAppController {
             @RequestParam(name = "MD", required = false) String md) {
 
         RedirectView redirectView = new RedirectView();
-        redirectView.setUrl("https://10.1.200.12/payment-confirmation-3ds");
+        redirectView.setUrl("https://rabhishek7.github.io/success-form/");
         return redirectView;
+    }
+     @PostMapping("/myapp1")
+    public String abc(
+            @RequestParam(name = "TransactionId", required = false) String transactionId,
+            @RequestParam(name = "Response", required = false) String responseParam,
+            @RequestParam(name = "MD", required = false) String md) {
+
+       
+        return "Abc";
     }
 }
